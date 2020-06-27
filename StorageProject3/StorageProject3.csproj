@@ -169,6 +169,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\DepotsController.cs" />
+    <Compile Include="Controllers\FurnituresController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LocationsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -204,9 +205,14 @@
     <Compile Include="Migrations\202006262038432_SeedUsers.Designer.cs">
       <DependentUpon>202006262038432_SeedUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006270450455_AddFurnitureToModels.cs" />
+    <Compile Include="Migrations\202006270450455_AddFurnitureToModels.Designer.cs">
+      <DependentUpon>202006270450455_AddFurnitureToModels.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Depot.cs" />
+    <Compile Include="Models\Furniture.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Location.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -281,6 +287,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Furnitures\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -316,6 +323,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006262038432_SeedUsers.resx">
       <DependentUpon>202006262038432_SeedUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006270450455_AddFurnitureToModels.resx">
+      <DependentUpon>202006270450455_AddFurnitureToModels.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

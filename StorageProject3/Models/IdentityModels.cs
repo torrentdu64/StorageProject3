@@ -24,6 +24,9 @@ namespace StorageProject3.Models
         public DbSet<Product> Products { get; set; }
 
         public DbSet<Depot> Depots { get; set; }
+
+        public DbSet<Furniture> Furnitures { get; set;}
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
