@@ -25,8 +25,8 @@ namespace StorageProject3.Controllers
         [Authorize(Roles = RoleName.CanStoreProduct)]
         public ActionResult Index()
         {
-            var depots = _context.Depots.ToList();
-            return View(depots);
+            //var depots = _context.Depots.ToList();
+            return View();
         }
 
         [Route("Depots/Show/{id}")]
@@ -34,13 +34,13 @@ namespace StorageProject3.Controllers
         public ActionResult Show(int id)
         {
 
-           var depot =  _context.Depots.SingleOrDefault(m => m.Id == id);
+          // var depot =  _context.Depots.SingleOrDefault(m => m.Id == id);
             // var product = new Product();
             var products = new List<Product>();
             var location = new Location();
             var viewModel = new ProductsObjectViewModel
             {
-                Depot = depot,
+                //Depot = depot,
                 Products = products,
                 Location = location
             };
@@ -48,7 +48,8 @@ namespace StorageProject3.Controllers
             if (User.IsInRole(RoleName.CanStoreProduct))
                 return View("ShowAdmin", viewModel);
 
-            return View("Show", depot);
+            //return View("Show", depot);
+            return View();
         }
         [AllowAnonymous]
         public ActionResult New()
@@ -60,7 +61,7 @@ namespace StorageProject3.Controllers
         [AllowAnonymous]
         public ActionResult Create(Depot depot)
         {
-            _context.Depots.Add(depot);
+           // _context.Depots.Add(depot);
             _context.SaveChanges();
 
             TempData["message"] = "Deposit Successfully record";

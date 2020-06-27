@@ -1,0 +1,14 @@
+﻿@model IEnumerable<StorageProject3.Models.Furniture>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index Depot</h2>
+
+
+@foreach (var depo in Model)
+{
+    <h1> @depo.Name </h1>
+    @Html.ActionLink("Show", "Show", "Furnitures", new { id = depo.Id }, null)
+}

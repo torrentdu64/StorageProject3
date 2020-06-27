@@ -284,10 +284,13 @@
     <Content Include="Views\Depots\Index.cshtml" />
     <Content Include="Views\Depots\Show.cshtml" />
     <Content Include="Views\Depots\ShowAdmin.cshtml" />
+    <Content Include="Views\Furnitures\New.cshtml" />
+    <Content Include="Views\Furnitures\Show.cshtml" />
+    <Content Include="Views\Furnitures\ShowAdmin.cshtml" />
+    <Content Include="Views\Furnitures\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Furnitures\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

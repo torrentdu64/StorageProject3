@@ -23,7 +23,7 @@ namespace StorageProject3.Models
         public DbSet<Location> Locations { get; set; }
         public DbSet<Product> Products { get; set; }
 
-        public DbSet<Depot> Depots { get; set; }
+        //public DbSet<Depot> Depots { get; set; }
 
         public DbSet<Furniture> Furnitures { get; set;}
 
