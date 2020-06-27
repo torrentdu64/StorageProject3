@@ -20,6 +20,10 @@ namespace StorageProject3.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Location> Locations { get; set; }
+        public DbSet<Product> Products { get; set; }
+
+        public DbSet<Depot> Depots { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

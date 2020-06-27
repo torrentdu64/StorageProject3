@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StorageProject3.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,11 +9,25 @@ namespace StorageProject3.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        private ApplicationDbContext _context;
+
+        public HomeController()
         {
-            return View();
+            _context = new ApplicationDbContext();
         }
 
+
+        protected override void Dispose(bool disposing)
+        {
+            base.Dispose(disposing);
+        }
+        [AllowAnonymous]
+        public ActionResult Index()
+        {
+            var Locations = _context.Locations.ToList();
+            return View(Locations);
+        }
+        [AllowAnonymous]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

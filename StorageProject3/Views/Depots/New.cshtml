@@ -1,0 +1,15 @@
+﻿@model StorageProject3.Models.Depot
+@{
+    ViewBag.Title = "New";
+}
+
+<h2>New Depot</h2>
+
+@using (Html.BeginForm("Create", "Depots"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+    </div>
+    <button type="submit" class="btn btn-danger">Submit</button>
+}

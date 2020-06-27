@@ -168,16 +168,53 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DepotsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LocationsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006172221224_InitialModel.cs" />
+    <Compile Include="Migrations\202006172221224_InitialModel.Designer.cs">
+      <DependentUpon>202006172221224_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006172229153_AddProduct.cs" />
+    <Compile Include="Migrations\202006172229153_AddProduct.Designer.cs">
+      <DependentUpon>202006172229153_AddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006172304403_AddLocationForce.cs" />
+    <Compile Include="Migrations\202006172304403_AddLocationForce.Designer.cs">
+      <DependentUpon>202006172304403_AddLocationForce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006172357026_AddLocationForcewithouts.cs" />
+    <Compile Include="Migrations\202006172357026_AddLocationForcewithouts.Designer.cs">
+      <DependentUpon>202006172357026_AddLocationForcewithouts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006180237422_AddProduct1.cs" />
+    <Compile Include="Migrations\202006180237422_AddProduct1.Designer.cs">
+      <DependentUpon>202006180237422_AddProduct1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006260458444_AddDepotTable.cs" />
+    <Compile Include="Migrations\202006260458444_AddDepotTable.Designer.cs">
+      <DependentUpon>202006260458444_AddDepotTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006262038432_SeedUsers.cs" />
+    <Compile Include="Migrations\202006262038432_SeedUsers.Designer.cs">
+      <DependentUpon>202006262038432_SeedUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Depot.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Location.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\RoleName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\ProductsObjectViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -235,6 +272,12 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Locations\Index.cshtml" />
+    <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\Depots\New.cshtml" />
+    <Content Include="Views\Depots\Index.cshtml" />
+    <Content Include="Views\Depots\Show.cshtml" />
+    <Content Include="Views\Depots\ShowAdmin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -251,6 +294,29 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202006172221224_InitialModel.resx">
+      <DependentUpon>202006172221224_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006172229153_AddProduct.resx">
+      <DependentUpon>202006172229153_AddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006172304403_AddLocationForce.resx">
+      <DependentUpon>202006172304403_AddLocationForce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006172357026_AddLocationForcewithouts.resx">
+      <DependentUpon>202006172357026_AddLocationForcewithouts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006180237422_AddProduct1.resx">
+      <DependentUpon>202006180237422_AddProduct1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006260458444_AddDepotTable.resx">
+      <DependentUpon>202006260458444_AddDepotTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006262038432_SeedUsers.resx">
+      <DependentUpon>202006262038432_SeedUsers.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
